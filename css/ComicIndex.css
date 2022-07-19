@@ -1,0 +1,119 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#div1 {
+  width: 500px;
+  height: 420px;
+  margin: 100px auto;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+#div1 ul.big_pic {
+  position: relative;
+  height: 320px;
+}
+#div1 ul.big_pic div.prev {
+  opacity: 0;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 50%;
+  z-index: 100;
+}
+#div1 ul.big_pic div.prev a.mark_left {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 10px;
+  background: url("../images/btn.gif");
+}
+#div1 ul.big_pic div.next {
+  opacity: 0;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+#div1 ul.big_pic div.next a.mark_right {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  right: 10px;
+  background: url("../images/btn.gif") left -60px;
+}
+#div1 ul.big_pic div.text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 26px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.51);
+  width: 70%;
+  height: 26px;
+  z-index: 200;
+  font-size: 14px;
+  padding-left: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#div1 ul.big_pic div.length {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  line-height: 26px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.51);
+  width: 30%;
+  height: 26px;
+  z-index: 200;
+  font-size: 14px;
+  text-align: center;
+}
+#div1 ul.big_pic li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 320px;
+  overflow: hidden;
+}
+#div1 ul.big_pic li img {
+  width: 100%;
+  height: 320px;
+}
+#div1 ul.small_pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #b0b0b0;
+  height: 100px;
+  padding: 6px 5px 6px 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+}
+#div1 ul.small_pic li {
+  width: calc(500px / 3);
+}
+#div1 ul.small_pic li img {
+  width: calc(488px / 3);
+  height: 100%;
+}
+#div1 ul.small_pic li:not(:last-child) img {
+  padding-right: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}

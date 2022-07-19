@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页</title>
+    <style>
+        body{
+        background:url(./image/zewg.jpg);
+        background-repeat:no-repeat;
+        background-size:cover; 
+        background-attachment: fixed;
+        }
+
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+
+        .input{
+            padding: 5px;
+            height: 38px;
+            box-sizing: border-box;
+            width: 360px;
+            margin: 2px;
+        }
+
+        span{
+            display:inline-block;
+            height:35px;
+            width: 70px;
+            text-align:right;
+        }
+
+        input[type="button"]{
+            height: 35px;
+            width: 100px;
+            padding: 2px 5px;  
+            box-sizing: border-box;     
+        }
+
+        .col{
+            margin: 20px;
+        }
+
+        .col4{
+            margin:10px 80px;
+        }
+
+        .col3>input[type="text"]{
+            width: 255px;
+/*            border-radius: 2px;*/
+        }
+
+        .submit{
+            height:55px;
+            width: 400px;
+            color:white;
+            background:rgb(91, 113, 241,0.4);
+            font-family: "黑体";
+            font-size: 18px;
+            margin-left:60px;
+            border-radius: 20px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .tyg-div-denglv{
+        z-index:1000;float:right;position:absolute;right:8%;top:15%;
+        }
+
+         .tyg-div-form{
+        /*白色背景*/
+        background-color:rgba(255,255,255,0.9);
+        /*深蓝背景*/
+/*        background-color:rgba(23,48,90,0.8);*/
+        border-radius: 10px;
+        width:510px;
+        height:450px;
+        margin:20px auto 0 auto;
+        padding: 30px 0px 0px 0px;
+/*        color:#2ec0f6;*/
+        }
+        .textTitle{
+            font-size: 54px;
+            letter-spacing: 0px;
+            font-weight: 700;
+        }
+        .textKing{
+            font-size: 32px;
+            letter-spacing: 3.81px;
+            font-weight: 300;
+        }
+		#footer{
+			position: absolute;
+			bottom: 2%;
+			margin-left: 660px;
+		}
+    </style>
+</head>
+
+<body>
+    <div style="margin: 60px 0px 0px 70px"><font size="6" color="white"><strong>Stcloud</strong></font>
+        <div style="margin: 225px 0px 0px 170px" class="textTitle">
+          <font  color="white">罪恶王冠</font>
+          <div class="textKing">
+            <font size="5" color="white">我的愿望是，将一位少女拥入怀中，</font>
+          </div>
+          <div class="textKing">
+            <font size="5" color="white">而拯救世界，只不过是顺带罢了。</font>
+          </div>
+        </div>
+<!--        <div style="margin: 150px 0px 0px 0px">
+          <font size="4" color="white"> Designed by Stcloud</font>
+        </div> -->
+    </div>
+
+    <!--脚本-->
+    <script language=javascript>
+    function check(f)//检测函数
+    {
+        if(f.user.value=="")//如果用户名为空
+        {
+            alert("请输入用户名！");//弹出提示框
+            f.user.focus();//文本框获取焦点
+            return false;//返回错误
+        }
+        if(f.pw.value=="")
+        {
+            alert("请输入密码！");
+            f.pw.focus();
+            return false;
+        }
+            return false;
+    }
+</script>
+
+    <div class="contrain">
+        <div class="tyg-div-denglv">
+            <div class="tyg-div-form">
+				<font size="6" color="black"><strong>&nbsp;&nbsp;&nbsp;&nbsp;欢迎注册</strong></font>
+				<!--表单-->
+                <form action="" onsubmit="return check(this)" method="post" class="form" role="form">
+					<div class="col" title="设置后不可更改，中英文均可，最长14个英文或7个汉字">
+						<span><strong>用&nbsp;&nbsp;&nbsp;户</strong></span>&nbsp;&nbsp;
+							<input type="text" name="user" id="" class="input" placeholder=" 请设置用户名">
+
+					</div>
+					<div class="col">
+						<span><strong>手机号</strong></span>&nbsp;&nbsp;
+						<input type="text" class="input" id="telephone" placeholder="可用于登录及找回密码">
+					</div>
+					<div class="col"  title="长度为8~14个字符
+字母/数字以及标点符号至少包含2种
+不允许有空格、中文">
+						<span><strong>密&nbsp;&nbsp;&nbsp;码</strong></span>&nbsp;&nbsp;
+						<input type="text" name="pw" id="password" class="input" placeholder="请设置登录密码">
+					</div>
+					<div class="col3 col">
+						<span><strong>验证码</strong></span>&nbsp;&nbsp;
+						<input type="text" name="" id="password_id" class="input" placeholder="请输入验证码">
+						<input type="button" value="获取验证码" class="button" id="getId">
+					</div>
+
+					<div>
+						<button id="submit" class="submit">注册</button>
+					</div>
+					<div style="text-align: center;margin-top: 10px;">
+						<a href="login.html"><font size="3" color="black"><strong>&nbsp;&nbsp;&nbsp;&nbsp;已经注册？点击登陆</strong></font></a>
+					</div>
+					<!-- <div class="col4">	
+						<input type="checkbox" name="" id="" class="right">
+						<span style="display:inline;font-size: 12px;">阅读并接受<a href="#" id="one">《用户条例》</a>和<a href="#" id="two">《用户隐私保护声明》</a></span>
+					</div> -->
+				</form>
+			</div>
+        </div>
+    </div>
+	<div id="footer" style="text-align: center;">
+		<font size="4" color="white"> Designed by Stcloud 2020</font>
+	</div>
+</body>
+
+</html>
